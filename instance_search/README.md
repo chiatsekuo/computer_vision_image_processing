@@ -1,1 +1,1 @@
-﻿# Instance Search using CNN transfer learning & Color Histograms
+﻿# Instance Search using CNN Transfer Learning & Color Histograms
