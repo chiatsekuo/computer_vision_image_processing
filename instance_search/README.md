@@ -43,4 +43,3 @@ For the Convolutional Neural Network approach, I performed a transfer learning t
 
 ##### 3.2.1	Result of example query & Top 10 retrieved images ####
 
-![Top 10 retrieved images by histogram](/instance_search/cnn_query.png)
