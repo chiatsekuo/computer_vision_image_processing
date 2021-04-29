@@ -43,3 +43,28 @@ For the Convolutional Neural Network approach, I performed a transfer learning t
 
 ##### 3.2.1	Result of example query & Top 10 retrieved images ####
 
+![Top 10 retrieved images by cnn](/instance_search/cnn_query.png)
+
+(Note: The retrieved images of each query image are presented in the same row. From top to bottom: first query image to the last one.)
+
+The average precision and the mean average precision of the instance search on 10 example query images are as shown below: 
+
+Average Precision of Q1: 0.6899<br>
+Average Precision of Q2: 0.4248<br>
+Average Precision of Q3: 0.4228<br>
+Average Precision of Q4: 0.6346<br>
+Average Precision of Q5: 0.9774<br>
+Average Precision of Q6: 0.4681<br>
+Average Precision of Q7: 0.1824<br>
+Average Precision of Q8: 0.1251<br>
+Average Precision of Q9: 0.8453<br>
+Average Precision of Q10: 0.6915<br>
+Mean Average Precision: **0.546182**<br>
+
+## Discussion & Conclusion ##
+
+From the color histogram algorithm, I found that it tends to take the background scenes of each image into consideration as matching points or shared similar color distributions. If all target images were cropped out of the original images, it would be easier for algorithms to compare the shared features. Another discovery related to this problem is that even though the query image has similar color distribution with the retrieved target image, the object in both images are unrelated. In this situation, the color distribution may not work very well. Instead, a broader view of the images like the styles of edges should be considered to let the algorithm have a holistic view on the shape of both the query images and the target images. 
+
+Therefore, I tried to implement convolutional neural networks to solve this issue. Since it not only detects the color distribution and edges, but also other important hidden features that the human eye may not discern. I also took advantage of transfer learning to extract image features. It not only saves time but also could bring a higher chance of success in instance search considering the fact that it has been trained on millions of real-world images with thousands of classes. From the results, we can see that the CNN solution yields way higher results than the color histogram. Though the mean accuracy may not be considered high, some cases (Q5 & Q9) have shown high accuracy in searching similar images.
+
+I believe the color histogram model can be improved by increasing the color bins of the color histogram method and trying different distance metrics. As for the CNN transfer learning, different pre-trained models and deeper networks should be further tested to evaluate the potential of instance search among images.
