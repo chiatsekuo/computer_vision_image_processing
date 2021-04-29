@@ -42,3 +42,4 @@ Mean Average Precision: **0.045654**<br>
 For the Convolutional Neural Network approach, I performed a transfer learning technique on ResNet. Benefiting from the pre-trained network’s weights, the image matching time could be shortened exponentially than training from scratch. By extracting features of all images including the query images and the target images from the Image folder, the similarities between the query image and each target image can be retrieved by calculating the distance between them. Here, I simply used Euclidean distance as the distance metric.
 
 ##### 3.2.1	Result of example query & Top 10 retrieved images ####
+
