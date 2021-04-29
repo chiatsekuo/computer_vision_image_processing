@@ -35,7 +35,8 @@ Average Precision of Q9: 0.0137<br>
 Average Precision of Q10: 0.0052<br>
 Mean Average Precision: **0.045654**<br>
 
-![Top 10 retrieved images by histogram](/instance_search/hist_query.png)
+<img src="/instance_search/hist_query.png" alt="t" width="800" height="800">
+
 
 ### 3.2 CNN ###
 
@@ -43,7 +44,7 @@ For the Convolutional Neural Network approach, I performed a transfer learning t
 
 ##### 3.2.1	Result of example query & Top 10 retrieved images ####
 
-![Top 10 retrieved images by cnn](/instance_search/cnn_query.png)
+<img src="/instance_search/cnn_query.png" alt="t" width="800" height="800">
 
 (Note: The retrieved images of each query image are presented in the same row. From top to bottom: first query image to the last one.)
 
