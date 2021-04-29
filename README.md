@@ -2,4 +2,4 @@
 
 CS4186 assignments & course projects
 
-- Instance Search with color histogram and CNN transfer learning
+- [Instance Search](/instance_search) with color histogram and CNN transfer learning
